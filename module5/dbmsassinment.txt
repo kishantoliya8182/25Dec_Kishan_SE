@@ -1,0 +1,33 @@
+=============================================module-5 queries===================================
+1.
+
+ans=
+CREATE TABLE student
+( rollno  integer PRIMARY KEY AUTO_INCREMENT,
+ name  varchar(30),
+ branch varchar(50)
+ )
+ 
+INSERT INTO student(name,branch) VALUES
+('jay','computer science'),
+('suhani ','electronics and com'),
+('kriti','electronics and com'),
+
+
+CREATE TABLE exam
+(
+rollno integer,
+scode  text,
+marks integer,
+p_code text,
+FOREIGN KEY (rollno) REFERENCES student(rollno)
+)
+
+INSERT INTO exam VALUES
+(1,'cs11','50','cs'),
+(1,'cs12','60','cs'),
+(2,'ec101','66','ec'),
+(2,'ec102','70','ec'),
+(3,'ec101','45','ec'),
+(3,'ec102','50','ec')
+

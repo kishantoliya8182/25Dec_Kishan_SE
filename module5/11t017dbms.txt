@@ -1,0 +1,62 @@
+
+
+=================================================salesperson===================================================
+CREATE table salesperson(
+sno integer primary key,
+sname text,
+city text,
+comm real
+)
+
+
+INSERT INTO salesperson VALUES
+(1001,'peel','london',.12),
+(1002,'serres','san jose',.13),
+(1004,'motika','london',.11),
+(1007,'rafkin','barcelona',.15),
+(1003,'axelrod','new york',.1)
+
+
+==============================================customer============================================
+
+CREATE TABLE Customer(CNM int NOT NULL,
+                     CNAME varchar(50)NOT NULL,
+                     CITY varchar(50) NOT NULL,
+                     RATING int NOT NULL,5
+                     SNo int NOT NULL,
+                     PRIMARY KEY(CNM),
+                     FOREIGN KEY(SNo) REFERENCES salseperson(SNo)
+                     )
+
+INSERT INTO customer(CNM,CNAME,CITY,RATING,SNo) 
+                  VALUES(201,'Hoffman','London',100,1001),
+                        (202,'Giovanne','Roe',200,1003),
+                        (203,'Liu','San Jose',300,1002),
+                        (204,'Grass','Barcelona',100,1002),
+                        (206,'Clemens','London',300,1007),
+                        (207,'Pereira','roe',100,1004);
+
+======================================================================================
+
+14.Names and cities of all salespeople in London with commission above 0.12
+
+ANS:= SELECT SNAME,CITY FROM salseperson WHERE CITY = 'London' AND COMM >= 0.12
+
+=======================================================================================
+
+15.All salespeople either in Barcelona or in London
+
+ANS:= SELECT * FROM salseperson WHERE CITY = 'barcelona' OR CITY = 'london'
+
+========================================================================================
+
+16.All salespeople with commission between 0.10 and 0.12.(Boundary valuesshould be excluded)
+
+ANS:= SELECT * FROM salseperson WHERE COMM BETWEEN 0.10 AND 0.12
+
+========================================================================================
+
+17.All customers excluding those with rating <= 100 unless they are
+locatedinRome
+
+ANS:= SELECT * FROM customer WHERE RATING <=100 OR CITY = 'ROE'

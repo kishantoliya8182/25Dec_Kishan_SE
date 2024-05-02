@@ -1,0 +1,53 @@
+1. What do you understand By Database
+
+ANS:= A database is an organized collection of data stored in a computer system . The data in common databases is fit in tables, making querying and processing . Structured query language  is commonly used for data querying and writing.
+
+2. What is Normalization?
+
+ANS:=Normalization is the process of minimizing redundancy from a relation or set of relations.
+
+3. What is Difference between DBMS and RDBMS?
+
+ANS:=DBMS stands for Database Management System, and RDBMS is the acronym for the Relational Database Management system. In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
+
+4. What is MF Cod Rule of RDBMS Systems?
+
+ANS:=Codd’s rules are proposed by a computer scientist named Dr. Edgar F. Codd and he also invent the relational model for database management. These rules are made to ensure data integrity, consistency, and usability. This set of rules basically signifies the characteristics and requirements of a relational database management system . In this article, we will learn about various Codd’s rules
+
+5. What do you understand By Data Redundancy?
+
+ANS:=Data redundancy is when multiple copies of the same information are stored in more than one place at a time. This challenge plagues organizations of all sizes in all industries and leads to elevated storage costs, errors, and compromised analytics
+
+6. What is DDL Interpreter?
+
+ANS:=DDL Interpreter interprets the DDL statements and records the generated statements in the table containing metadata.
+
+7. What is DML Compiler in SQL?
+
+DML Compiler: Translates DML statements in a query language within low level instructions understandable through the query evaluation engine. Attempts to transforms users request within an equivalent and well-organized from for executing the query understandable through Data Manager, Interprets DDL statements and records them within a set of tables containing Meta data in a form that can be used through other elements of a DBMS.
+
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints
+
+ANS:=In a database table, we can add rules to a column known as constraints. These rules control the data that can be stored in a column.PRIMARY KEY=used to uniquely identify a row
+FOREIGN KEY=references a row in another table.
+
+EXAMPLE:=
+ CREATE TABLE Orders (
+  order_id INT PRIMARY KEY,
+  customer_id int REFERENCES Customers(id)
+);
+
+
+9. What is save Point? How to create a save Point write a Query?
+
+ANS:= A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction. Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME; This command is used only in the creation of SAVEPOINT among all the transactions.
+
+10.What is trigger and how to create a Trigger in SQL?
+
+ANS:=A trigger is a set of SQL statements that reside in system memory with unique names. It is a specialized category of stored procedure that is called automatically when a database server event occurs. Each trigger is always associated with a table.
+
+We can create a trigger in SQL Server by using the CREATE TRIGGER statement as follows:
+
+
+
+

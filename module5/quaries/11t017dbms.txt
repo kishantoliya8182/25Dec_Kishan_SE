@@ -1,3 +1,4 @@
+Q.11 Create table given below: Salesperson and Customer
 
 
 =================================================salesperson===================================================
@@ -25,7 +26,7 @@ CREATE TABLE Customer(CNM int NOT NULL,
                      RATING int NOT NULL,5
                      SNo int NOT NULL,
                      PRIMARY KEY(CNM),
-                     FOREIGN KEY(SNo) REFERENCES salseperson(SNo)
+                     FOREIGN KEY(SNo) REFERENCES salesperson(SNo)
                      )
 
 INSERT INTO customer(CNM,CNAME,CITY,RATING,SNo) 
@@ -40,19 +41,19 @@ INSERT INTO customer(CNM,CNAME,CITY,RATING,SNo)
 
 14.Names and cities of all salespeople in London with commission above 0.12
 
-ANS:= SELECT SNAME,CITY FROM salseperson WHERE CITY = 'London' AND COMM >= 0.12
+ANS:= SELECT SNAME,CITY FROM salesperson WHERE CITY = 'London' AND COMM >= 0.12
 
 =======================================================================================
 
 15.All salespeople either in Barcelona or in London
 
-ANS:= SELECT * FROM salseperson WHERE CITY = 'barcelona' OR CITY = 'london'
+ANS:= SELECT * FROM salesperson WHERE CITY = 'barcelona' OR CITY = 'london'
 
 ========================================================================================
 
 16.All salespeople with commission between 0.10 and 0.12.(Boundary valuesshould be excluded)
 
-ANS:= SELECT * FROM salseperson WHERE COMM BETWEEN 0.10 AND 0.12
+ANS:= SELECT * FROM salesperson WHERE COMM BETWEEN 0.10 AND 0.12
 
 ========================================================================================
 

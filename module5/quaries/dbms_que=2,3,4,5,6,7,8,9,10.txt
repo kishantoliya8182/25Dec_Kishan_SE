@@ -1,3 +1,7 @@
+Q.2 Create table given below: Employee and IncentiveTable
+
+
+
 CREATE TABLE employee
 (
     employee_id integer AUTO_INCREMENT PRIMARY KEY,
@@ -73,6 +77,7 @@ begin
 insert into employee_backup VALUES (null, NEW.Employee_id, NEW.First_name, NEW.Last_Name, NEW.Salary, New.Joining_date, NEW.Department, 'Record Inserted', now());
 end
 //
+DELIMITER ;
 
 
 
@@ -86,8 +91,7 @@ end
 
 
 
-
-
+	
 
 
 

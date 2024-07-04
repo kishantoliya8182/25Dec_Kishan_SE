@@ -1,0 +1,296 @@
+1. What do you understand By Database
+
+ANS:= A database is an organized collection of data stored in a computer system . The data in common databases is fit in tables, making querying and processing . Structured query language  is commonly used for data querying and writing.
+
+2. What is Normalization?
+
+ANS:=Normalization is the process of minimizing redundancy (duplicity)
+from a relation or set of relations. Redundancy in relation may cause
+insertion, deletion and updating anomalies. So, it helps to minimize
+the redundancy in relations.
+Most used normal forms:
+First normal form(1NF)
+Second normal form(2NF)
+Third normal form(3NF)
+Boyce & Codd normal form (BCNF)
+
+3. What is Difference between DBMS and RDBMS?
+
+ANS:=DBMS stands for Database Management System, and RDBMS is the acronym for the Relational Database Management system. In DBMS, the data is stored as a file, whereas in RDBMS, data is stored in the form of tables.
+
+Difference between RDBMS and DBMS
+============================================================================================================================================================================================
+									       |							
+                    RDBMS                                                      |                                                            DBMS
+============================================================================================================================================================================================
+									       |
+	Data stored is in table format                                         |                                Data stored is in the file format
+									       |
+============================================================================================================================================================================================
+									       |
+	Data is stored in a large amount                                       |                                Data stored is a small quantity
+============================================================================================================================================================================================
+									       |
+	RDBMS supports multiple users 					       |				DBMS supports a single user
+============================================================================================================================================================================================
+	Multiple data elements accessible together			       | 				Individual access of data elements
+									       |
+============================================================================================================================================================================================
+	Normalisation is not achievable 				       |				There is normalisation
+									       |
+===========================================================================================================================================================================================
+	Support distributed database					       |				 No support for distributed 
+									       |
+============================================================================================================================================================================================
+	Oracle, SQL Server.         					       |				 XML, Microsoft Access.
+									       |	
+=========================================================================================================================================================================================	
+
+
+Q 4. What is MF Cod Rule of RDBMS Systems?
+
+ANS:=
+
+
+Rule 1: The Information Rule:-
+All information, whether it is user information or metadata, that is
+stored in a database must be entered as a value in a cell of a table.
+It is said that everything within the database is organized in a
+table layout.
+======================================================================
+Rule 2: The Guaranteed Access Rule:-
+Each data element is guaranteed to be accessible logically with a
+combination of the table name, primary key (row value), and
+attribute name (column value).
+======================================================================
+Rule 3: Systematic Treatment of NULL Values:-
+
+Every Null value in a database must be given a systematic and
+uniform treatment.
+======================================================================
+Rule 4: Active Online Catalog Rule:-
+
+The database catalog, which contains metadata about the
+database, must be stored and accessed using the same relational
+database management system.
+======================================================================
+
+Rule 5: The Comprehensive Data Sublanguage Rule:-
+
+A crucial component of any efficient database system is its ability
+to offer an easily understandable data manipulation language
+(DML) that facilitates defining, querying, and modifying
+information within the database.
+======================================================================
+
+Rule 6: The View Updating Rule:-
+
+All views that are theoretically updatable must also be updatable
+by the system.
+======================================================================
+
+Rule 7: High-level Insert, Update, and Delete:-
+
+A successful database system must possess the feature of
+facilitating high-level insertions, updates, and deletions that can
+grant users the ability to conduct these operations with ease
+through a single query.
+======================================================================
+
+Rule 8: Physical Data Independence:-
+
+Application programs and activities should remain unaffected
+when changes are made to the physical storage structures or
+methods.
+======================================================================
+
+Rule 9: Logical Data Independence:-
+
+Application programs and activities should remain unaffected
+when changes are made to the logical structure of the data, such
+as adding or modifying tables.
+======================================================================
+
+Rule 10: Integrity Independence:-
+
+Integrity constraints should be specified separately from
+application programs and stored in the catalog. They should be
+automatically enforced by the database system.
+======================================================================
+
+Rule 11: Distribution Independence:-
+
+The distribution of data across multiple locations should be
+invisible to users, and the database system should handle the
+distribution transparently.
+======================================================================
+
+Rule 12: Non-Subversion Rule:-
+
+If the interface of the system is providing access to low-level
+records, then the interface must not be able to damage the system
+and bypass security and integrity constraints.
+
+=========================END=============================================
+
+
+5. What do you understand By Data Redundancy?
+
+ANS:=Data redundancy is when multiple copies of the same information are stored in more than one place at a time. This challenge plagues organizations of all sizes in all industries and leads to elevated storage costs, errors, and compromised analytics
+
+6. What is DDL Interpreter?
+
+ANS:=DDL Interpreter interprets the DDL statements and records the generated statements in the table containing metadata.
+Interpreting DDL Statements: When DDL statements (e.g.,
+CREATE TABLE, ALTER TABLE, DROP INDEX) are executed, the
+DDL Interpreter interprets them.
+Creating Metadata Tables: It generates a set of tables containing
+metadata (data about data).
+Data Dictionary: These metadata tables serve as a data dictionary,
+maintaining information about the database objects, their
+attributes, constraints, and relationships.
+Storing Schema Definitions: The DDL Interpreter records the
+schema definitions (e.g., table names, column names, data types)
+in the data dictionary.
+Maintaining Consistency: It ensures that the database remains
+consistent by enforcing rules and constraints defined in the DDL
+statements.
+
+
+
+7. What is DML Compiler in SQL?
+
+DML Compiler: The DML Compiler is responsible for processing DML statements.
+Its primary tasks include:
+Interpreting DML Statements: When DML statements (e.g.,
+SELECT, INSERT, UPDATE) are executed, the DML Compiler
+interprets them.
+Query Execution: It compiles and executes queries against the
+database.
+Data Retrieval: The DML Compiler retrieves data from the
+database based on the specified conditions.
+Data Modification: It handles data insertion, modification, and
+deletion.
+Transaction Handling: The DML Compiler ensures that changes
+made by DML statements are consistent and durable.
+
+8. What is SQL Key Constraints writing an Example of SQL Key Constraints
+
+ANS:=In a database table, we can add rules to a column known as constraints. These rules control the data that can be stored in a column.
+
+EXAMPLE:=PRIMARY KEY Constraint:-
+=================================
+ CREATE TABLE Orders (
+  order_id INT PRIMARY KEY,
+  customer_id int REFERENCES Customers(id)
+);
+The order_id serves as a unique identifier for each row.
+
+=====================================
+
+UNIQUE Constraint:-
+==================================
+
+The UNIQUE constraint ensures that a column must have unique
+values.
+Example:
+CREATE TABLE Employees (
+ employee_id INT NOT NULL UNIQUE,
+ employee_code VARCHAR(20) UNIQUE,
+ employee_name VARCHAR(50)
+);
+The employee_code column must have unique values.
+=====================================================
+
+FOREIGN KEY Constraint:-
+================================================
+The FOREIGN KEY constraint references a row in another table.
+Example:
+CREATE TABLE Orders (
+ order_id INT PRIMARY KEY,
+ customer_id INT REFERENCES Customers(customer_id),
+ order_total DECIMAL(10, 2)
+);
+The customer_id in the Orders table references the customer_id in
+the Customers table
+
+
+UNIQUE Constraint:-
+================================================================
+The UNIQUE constraint ensures that a column must have unique
+values.
+Example:
+CREATE TABLE Employees (
+ employee_id INT NOT NULL UNIQUE,
+ employee_code VARCHAR(20) UNIQUE,
+ employee_name VARCHAR(50)
+);
+The employee_code column must have unique values.
+
+
+
+
+9. What is save Point? How to create a save Point write a Query?	
+
+ANS:= A SAVEPOINT is a point in a transaction in which you can roll the transaction back to a certain point without rolling back the entire transaction. Syntax for Savepoint command: SAVEPOINT SAVEPOINT_NAME; This command is used only in the creation of SAVEPOINT among all the transactions.
+
+how you can create a savepoint and use it in SQL :=
+==================================
+1. Creating a Savepoint:-
+
+To initiate a transaction and create a savepoint, use the START
+TRANSACTION command:
+START TRANSACTION;
+SAVEPOINT my_savepoint;
+In this example, we’ve named our savepoint as my_savepoint.
+===================================================================
+
+2. Inserting Data:-
+
+Let’s say we insert a new record into a table:
+INSERT INTO my_table (column1, column2) VALUES (value1,
+value2);
+==================================================================
+
+3. Rolling Back to the Savepoint:-
+
+If something goes wrong and you want to undo changes made after
+the savepoint, use the ROLLBACK TO command:
+ROLLBACK TO my_savepoint;
+This will revert changes made after the my_savepoint.
+==================================================================
+
+4. Committing or Rolling Back the Entire Transaction:-
+
+To commit all changes made since the savepoint, use the COMMIT
+command:
+COMMIT;
+To discard all changes made since the savepoint and end the
+transaction, use the ROLLBACK command:
+ROLLBACK;
+==================================================================
+
+10.What is trigger and how to create a Trigger in SQL?
+
+ANS:=A trigger is a set of SQL statements that reside in system memory with unique names. It is a specialized category of stored procedure that is called automatically when a database server event occurs. Each trigger is always associated with a table.
+
+We can create a trigger in SQL Server by using the CREATE TRIGGER statement as follows:
+
+
+Types of Triggers:-
+======================
+
+ AFTER INSERT: Activated after data is inserted into the table.
+ AFTER UPDATE: Activated after data in the table is modified.
+ AFTER DELETE: Activated after data is deleted/removed
+ from the table.
+ BEFORE INSERT: Activated before data is inserted into the
+ table.
+ BEFORE UPDATE: Activated before data in the table is
+ modified.
+ BEFORE DELETE: Activated before data is deleted/removed
+ from the table.
+
+
+
+
